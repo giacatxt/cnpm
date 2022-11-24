@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="190.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutY="100.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="191.0" text="Xem thông tin" />
+            <Button layoutY="167.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="191.0" text="Nhập thông tin" />
+         </children>
+      </AnchorPane>
+   </left>
+   <bottom>
+      <AnchorPane prefHeight="104.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="507.0" layoutY="59.0" mnemonicParsing="false" text="Đăng xuât" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
