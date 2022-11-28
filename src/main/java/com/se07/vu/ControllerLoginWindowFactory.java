@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -24,22 +25,23 @@ public class ControllerLoginWindowFactory {
     Button ButtonCancelLogin;//
 
     public  void onButtonLogin(){
-        if(TextFieldUserName.getText().isBlank()==false&&PasswordFieldPassword.getText().isBlank()==false){
+        if(TextFieldUserName.getText().isBlank()==false && PasswordFieldPassword.getText().isBlank()==false){
             validateLogin();
         }else{
             LableAlerLogin.setText("Vui lòng nhập tên hoặc mật khẩu");
         }
     }
-    public  void onButtonCancelLogin(){
+    public void onButtonCancelLogin(){
         PasswordFieldPassword.setText("");
         TextFieldUserName.setText("");
         LableAlerLogin.setText("");
     }
     public void validateLogin(){
-        ConnectionDatabase connectionDatabase = new ConnectionDatabase();
-        Connection connection = connectionDatabase.getConnection();
-        String veritylogin = "select * from dangnhap where passwordd='"+PasswordFieldPassword.getText()+"'and userd='"+TextFieldUserName.getText()+"'";
-        System.out.println(veritylogin);
+        Connection connection = ConnectionDatabase.getConnection("sa", "MSSQL_SA_PASSWORD", "localhost",
+                "se07", 1433, false);
+        String veritylogin = "select * from dangnhap where passwordd='" + PasswordFieldPassword.getText() +
+                "'and userd='"+ TextFieldUserName.getText() + "'";
+//        System.out.println(veritylogin);
         try{
             Statement statement  = connection.createStatement();
             ResultSet queryResult =statement.executeQuery(veritylogin);
@@ -58,11 +60,13 @@ public class ControllerLoginWindowFactory {
                         LableAlerLogin.setText("");
                         UserWindowFactory userWindowFactory = new UserWindowFactory();
                         userWindowFactory.openWindow();
-                    }else{
+                    }else {
                         LableAlerLogin.setText("");
                         TreasurerWindowFactory treasurerWindowFactory = new TreasurerWindowFactory();
                         treasurerWindowFactory.openWindow();
                     }
+                    Stage loginStage = (Stage) ButtonLogin.getScene().getWindow();
+                    loginStage.close();
                 }else{
                     LableAlerLogin.setText("Vui lòng nhập lại tên hoặc mật khẩu");
                 }

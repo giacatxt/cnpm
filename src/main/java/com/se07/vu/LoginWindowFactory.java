@@ -12,7 +12,7 @@ public class LoginWindowFactory {
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(LoginWindowFactory.class.getResource("Login.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-            Image image = new Image("D:\\2022_2\\CNPM\\BTL\\src\\main\\resources\\com\\vu\\IconLogin.png");
+            Image image = new Image(LoginWindowFactory.class.getResource("IconLogin.png").toString());
             stage.getIcons().add(image);
 
             stage.setTitle("QUẢN LÝ NHÂN KHẨU");
