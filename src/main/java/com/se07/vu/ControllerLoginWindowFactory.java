@@ -37,7 +37,7 @@ public class ControllerLoginWindowFactory {
         LableAlerLogin.setText("");
     }
     public void validateLogin(){
-        Connection connection = ConnectionDatabase.getConnection("sa", "MSSQL_SA_PASSWORD", "localhost",
+        Connection connection = ConnectionDatabase.getConnection("sa", "123456", "DESKTOP-0P2LCL1",
                 "se07", 1433, false);
         String veritylogin = "select * from dangnhap where passwordd='" + PasswordFieldPassword.getText() +
                 "'and userd='"+ TextFieldUserName.getText() + "'";
