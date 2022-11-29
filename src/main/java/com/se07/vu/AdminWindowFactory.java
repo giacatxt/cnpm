@@ -10,8 +10,8 @@ public class AdminWindowFactory {
         try{//
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(LoginWindowFactory.class.getResource("admin.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 1280, 800);
-            Image image = new Image("D:\\2022_2\\CNPM\\BTL\\src\\main\\resources\\com\\vu\\IconLogin.png");
+            Scene scene = new Scene(fxmlLoader.load(), 915, 603);
+            Image image = new Image(AdminWindowFactory.class.getResource("IconLogin.png").toString());
             stage.getIcons().add(image);
             stage.setTitle("QUẢN LÝ NHÂN KHẨU");
             stage.setScene(scene);
