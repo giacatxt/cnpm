@@ -30,7 +30,7 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Button fx:id="ButtonCancelLogin" layoutX="29.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonCancelLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6;" text="Cancel" textFill="#eeecec">
+            <Button fx:id="ButtonCancelLogin" layoutX="29.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonCancelLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6; -fx-background-radius: 15;" text="Cancel" textFill="#eeecec">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -38,7 +38,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="ButtonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6;" text="Login" textFill="#ebe1e1">
+            <Button fx:id="ButtonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6; -fx-background-radius: 15;" text="Login" textFill="#ebe1e1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -46,12 +46,12 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <TextField fx:id="TextFieldUserName" layoutX="73.0" layoutY="119.0" prefHeight="31.0" prefWidth="215.0" promptText="Username">
+            <TextField fx:id="TextFieldUserName" layoutX="73.0" layoutY="119.0" prefHeight="31.0" prefWidth="215.0" promptText="Username" style="-fx-background-radius: 15;">
                <font>
                   <Font name="System Italic" size="15.0" />
                </font></TextField>
             <Label fx:id="LableAlerLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="211.0" prefHeight="21.0" prefWidth="322.0" textFill="#dd1515" />
-            <PasswordField fx:id="PasswordFieldPassword" layoutX="73.0" layoutY="170.0" prefHeight="31.0" prefWidth="215.0" promptText="Password">
+            <PasswordField fx:id="PasswordFieldPassword" layoutX="73.0" layoutY="170.0" prefHeight="31.0" prefWidth="215.0" promptText="Password" style="-fx-background-radius: 15;">
                <font>
                   <Font name="System Italic" size="15.0" />
                </font></PasswordField>

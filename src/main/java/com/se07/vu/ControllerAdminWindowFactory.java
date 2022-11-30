@@ -22,6 +22,9 @@ public class ControllerAdminWindowFactory {
             stage = (Stage) borderPaneAdmin.getScene().getWindow();
             System.out.println("Bạn đã đăng xuất khỏi trái đất");
             stage.close();
+            LoginWindowFactory loginWindowFactory = new LoginWindowFactory();
+            loginWindowFactory.openWindow();
         }
+
     }
 }
