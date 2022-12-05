@@ -1,0 +1,28 @@
+#buttonHomeAdmin{
+    -fx-background-color : rgb(40,132,217);
+}
+#buttonHomeAdmin:hover{
+    -fx-background-color: rgba(0,0,0);
+}
+#buttonPeopleAdmin{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonPeopleAdmin:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95)
+}
+#buttonUserAdmin{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonUserAdmin:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95)
+}
+#buttonAwardAdmin{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonAwardAdmin:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95);
+}
+#paneRightAdmin{
+    -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 183, 215, 0.6) 97.53%);
+}
+

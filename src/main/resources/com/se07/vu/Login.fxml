@@ -38,7 +38,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="ButtonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6; -fx-background-radius: 15;" text="Login" textFill="#ebe1e1">
+            <Button fx:id="buttonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6; -fx-background-radius: 15;" text="Login" textFill="#ebe1e1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

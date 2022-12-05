@@ -10,7 +10,7 @@ public class UserWindowFactory {
         try{
             Stage stage = new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(LoginWindowFactory.class.getResource("user.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Scene scene = new Scene(fxmlLoader.load(), 915, 603);
             Image image = new Image(LoginWindowFactory.class.getResource("IconLogin.png").toString());
             stage.getIcons().add(image);
             stage.setTitle("QUẢN LÝ NHÂN KHẨU");

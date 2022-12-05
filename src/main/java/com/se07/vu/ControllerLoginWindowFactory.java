@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
@@ -20,9 +21,22 @@ public class ControllerLoginWindowFactory {
     @FXML
     PasswordField PasswordFieldPassword;
     @FXML
-    Button ButtonLogin;
+    Button buttonLogin;
     @FXML
-    Button ButtonCancelLogin;//
+    Button ButtonCancelLogin;
+
+    public void keyPressedEnter(){
+        TextFieldUserName.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ENTER)){
+                onButtonLogin();
+            }
+        });
+        PasswordFieldPassword.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ENTER)){
+                onButtonLogin();
+            }
+        });
+    }
 
     public  void onButtonLogin(){
         if(TextFieldUserName.getText().isBlank()==false && PasswordFieldPassword.getText().isBlank()==false){
@@ -65,7 +79,7 @@ public class ControllerLoginWindowFactory {
                         TreasurerWindowFactory treasurerWindowFactory = new TreasurerWindowFactory();
                         treasurerWindowFactory.openWindow();
                     }
-                    Stage loginStage = (Stage) ButtonLogin.getScene().getWindow();
+                    Stage loginStage = (Stage) buttonLogin.getScene().getWindow();
                     loginStage.close();
                 }else{
                     LableAlerLogin.setText("Vui lòng nhập lại tên hoặc mật khẩu");

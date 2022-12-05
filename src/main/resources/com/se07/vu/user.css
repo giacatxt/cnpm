@@ -1,0 +1,23 @@
+#buttonHomeUser{
+    -fx-background-color : rgb(40,132,217);
+}
+#buttonHomeUser:hover{
+    -fx-background-color: rgba(0,0,0);
+}
+#buttonPeopleUser{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonPeopleUser:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95)
+}
+
+#buttonAwardUser{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonAwardUser:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95);
+}
+#paneRightUser{
+    -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 183, 215, 0.6) 97.53%);
+}
+

@@ -14,7 +14,6 @@ public class LoginWindowFactory {
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
             Image image = new Image(LoginWindowFactory.class.getResource("IconLogin.png").toString());
             stage.getIcons().add(image);
-
             stage.setTitle("QUẢN LÝ NHÂN KHẨU");
             stage.setScene(scene);
             stage.show();
