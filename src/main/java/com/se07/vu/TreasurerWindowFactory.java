@@ -4,9 +4,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class TreasurerWindowFactory {
-    public  Stage stage;
+    private Stage stage;
     public Stage openWindow() {
         try{
             stage = new Stage();
@@ -15,6 +16,7 @@ public class TreasurerWindowFactory {
             Image image = new Image(LoginWindowFactory.class.getResource("IconLogin.png").toString());
             stage.getIcons().add(image);
             stage.setTitle("QUẢN LÝ NHÂN KHẨU");
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(scene);
             stage.show();
         }

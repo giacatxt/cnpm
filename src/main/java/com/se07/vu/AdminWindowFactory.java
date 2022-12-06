@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class AdminWindowFactory {
     public Stage openWindow() {
@@ -14,6 +15,7 @@ public class AdminWindowFactory {
             Image image = new Image(AdminWindowFactory.class.getResource("IconLogin.png").toString());
             stage.getIcons().add(image);
             stage.setTitle("QUẢN LÝ NHÂN KHẨU");
+            stage.initStyle(StageStyle.UNDECORATED);
             stage.setScene(scene);
             stage.show();
         }
