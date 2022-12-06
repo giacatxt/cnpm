@@ -2,11 +2,9 @@ package com.se07.vu;
 
 import com.se07.main.ConnectionDatabase;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
@@ -24,6 +22,25 @@ public class ControllerLoginWindowFactory {
     Button buttonLogin;
     @FXML
     Button ButtonCancelLogin;
+    @FXML
+    BorderPane borderPaneMainAdmin;
+    private Stage stage;
+
+    public void keyPressedEscLogin(){
+        borderPaneMainAdmin.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ESCAPE)){
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Đăng xuất");
+                alert.setHeaderText("Bạn thực sự muốn đăng xuất");
+                alert.setContentText("Bạn có muốn lưu trước khi thoát");
+                if(alert.showAndWait().get() == ButtonType.OK) {
+                    stage = (Stage) borderPaneMainAdmin.getScene().getWindow();
+                    System.out.println("Bạn đã đăng xuất khỏi trái đất");
+                    stage.close();
+                }
+            }
+        });
+    }
 
     public void keyPressedEnter(){
         TextFieldUserName.setOnKeyPressed(keyEvent -> {

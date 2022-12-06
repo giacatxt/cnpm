@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -13,6 +14,14 @@ public class ControllerUserWindowFactory {
     @FXML
     Button buttonLogoutUser;
     private Stage stage;
+
+    public void keyPressedEscUser(){
+        anchorPaneUserMax.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ESCAPE)){
+                setButtonLogoutUser();
+            }
+        });
+    }
     public void setButtonLogoutUser() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Đăng xuất");
