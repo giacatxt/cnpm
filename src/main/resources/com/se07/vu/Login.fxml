@@ -30,7 +30,7 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Button fx:id="ButtonCancelLogin" layoutX="29.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonCancelLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6; -fx-background-radius: 15;" text="Cancel" textFill="#eeecec">
+            <Button fx:id="buttonCancelLogin" layoutX="29.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonCancelLogin" prefHeight="31.0" prefWidth="270.0" stylesheets="@login.css" text="Cancel" textFill="#eeecec">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -38,7 +38,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="buttonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" style="-fx-background-color: #0f46a6; -fx-background-radius: 15;" text="Login" textFill="#ebe1e1">
+            <Button fx:id="buttonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" stylesheets="@login.css" text="Login" textFill="#ebe1e1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -57,12 +57,12 @@
                </font></PasswordField>
             <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="46.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@IconLoginUser%20(2).png" />
+                  <Image url="@IconLoginUser.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="46.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@IconLoginPassword%20(2).png" />
+                  <Image url="@IconLoginPassword.png" />
                </image>
             </ImageView>
          </children>
