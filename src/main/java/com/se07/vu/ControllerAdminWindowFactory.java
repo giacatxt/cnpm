@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -15,6 +16,13 @@ public class ControllerAdminWindowFactory {
     AnchorPane anchorPaneAdminMax;
     Stage stage;
 
+    public void keyPressedEscAdmin(){
+        anchorPaneAdminMax.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ESCAPE)){
+                setButtonLogoutAdmin();
+            }
+        });
+    }
     public void setButtonLogoutAdmin(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Đăng xuất");
