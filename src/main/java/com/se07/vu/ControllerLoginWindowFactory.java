@@ -68,8 +68,15 @@ public class ControllerLoginWindowFactory {
         LableAlerLogin.setText("");
     }
     public void validateLogin(){
-        Connection connection = ConnectionDatabase.getConnection("sa", "123456", "DESKTOP-0P2LCL1",
-                "se07", 1433, false);
+        String user = System.getenv("USER");
+        String password = System.getenv("MSSQL_PWD");
+        String serverName = System.getenv("SERVER_NAME");
+        String databaseName = System.getenv("DATABASE_NAME");
+        int portNumber = Integer.parseInt(System.getenv("PORT_NUMBER"));
+        boolean encrypt = Boolean.parseBoolean(System.getenv("ENCRYPT"));
+
+        Connection connection = ConnectionDatabase.getConnection(user, password, serverName, databaseName,
+                portNumber, encrypt);
         String veritylogin = "select * from dangnhap where passwordd='" + PasswordFieldPassword.getText() +
                 "'and userd='"+ TextFieldUserName.getText() + "'";
 //        System.out.println(veritylogin);
