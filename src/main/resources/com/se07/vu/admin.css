@@ -2,7 +2,7 @@
     -fx-background-color : rgb(40,132,217);
 }
 #buttonHomeAdmin:hover{
-    -fx-background-color: rgba(0,0,0);
+    -fx-background-color:rgba(4, 57, 244, 0.95)
 }
 #buttonPeopleAdmin{
     -fx-background-color: rgba(0, 53, 240, 0.7);
@@ -16,13 +16,120 @@
 #buttonUserAdmin:hover{
     -fx-background-color:rgba(4, 57, 244, 0.95)
 }
-#buttonAwardAdmin{
+#menuButtonAwardAdmin{
     -fx-background-color: rgba(0, 53, 240, 0.7);
 }
-#buttonAwardAdmin:hover{
+#menuButtonAwardAdmin:hover{
     -fx-background-color:rgba(4, 57, 244, 0.95);
 }
 #paneRightAdmin{
     -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 183, 215, 0.6) 97.53%);
 }
-
+#test{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#test:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95);
+}
+#paneTemporaryRegistrationPeoppleAdmin{
+    -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(28, 50, 25, 0.6) 97.53%);
+}
+#paneNewPeopleAdmin{
+    -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 83, 15, 0.6) 97.53%);
+}
+#paneUserAdmin{
+    -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 183, 15, 0.6) 97.53%);
+}
+#paneAbsentRegistrationAdmin{
+    -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(2, 183, 215, 0.6) 97.53%);
+}
+#buttonLogoutAdmin{
+    -fx-background-color: black;
+}
+#buttonLogoutAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonNewPeopleAdmin{
+    -fx-background-color: black;
+}
+#buttonNewPeopleAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonAbsentRegistrationAdmin{
+    -fx-background-color: black;
+}
+#buttonAbsentRegistrationAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonTemporaryRegistrationPeoppleAdmin{
+    -fx-background-color: black;
+}
+#buttonTemporaryRegistrationPeoppleAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonCancelNewPeopleAdmin{
+    -fx-background-color: #000000;
+}
+#buttonCancelNewPeopleAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonRemovePeopleAdmin{
+    -fx-background-color: #000000;
+}
+#buttonRemovePeopleAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#paneNewUserAdmin{
+    -fx-background-color: white;
+}
+#buttonNewUserAdmin{
+    -fx-background-color: black;
+}
+#buttonNewUserAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonSplitUserAdmin{
+    -fx-background-color: black;
+}
+#buttonSplitUserAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonRemoveUserAdmin{
+    -fx-background-color: black;
+}
+#buttonRemoveUserAdmin:hover{
+    -fx-background-color: #BF3fBF;
+}
+#buttonCancelNewUserAdmin{
+    -fx-background-color: black;
+}
+#buttonCancelNewUserAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#paneSplitUserAdmin{
+    -fx-background-color: white;
+}
+#buttonCancelSplitUserAdmin{
+    -fx-background-color: black;
+}
+#buttonCancelSplitUserAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonAcceptNewPeopleAdmin{
+    -fx-background-color: black;
+}
+#buttonAcceptNewPeopleAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonCancelTemporaryRegistrationPeoppleAdmin{
+    -fx-background-color: black;
+}
+#buttonCancelTemporaryRegistrationPeoppleAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
+#buttonCancelAbsentRegistrationAdmin{
+    -fx-background-color: black;
+}
+#buttonCancelAbsentRegistrationAdmin:hover{
+    -fx-background-color: #BF3FBF;
+}
