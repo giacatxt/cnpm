@@ -4,6 +4,7 @@ import com.se07.main.ConnectionDatabase;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -22,6 +23,8 @@ public class ControllerLoginWindowFactory {
     Button buttonLogin;
     @FXML
     Button ButtonCancelLogin;
+    @FXML
+    CheckBox checkBoxAdmin, checkBoxUser, checkBoxTreasurer;
     @FXML
     BorderPane borderPaneMainAdmin;
     private Stage stage;
@@ -53,6 +56,21 @@ public class ControllerLoginWindowFactory {
                 onButtonLogin();
             }
         });
+        checkBoxAdmin.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ENTER)){
+                onButtonLogin();
+            }
+        });
+        checkBoxUser.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ENTER)){
+                onButtonLogin();
+            }
+        });
+        checkBoxTreasurer.setOnKeyPressed(keyEvent -> {
+            if(keyEvent.getCode().equals(KeyCode.ENTER)){
+                onButtonLogin();
+            }
+        });
     }
 
     public  void onButtonLogin(){
@@ -66,6 +84,9 @@ public class ControllerLoginWindowFactory {
         PasswordFieldPassword.setText("");
         TextFieldUserName.setText("");
         LableAlerLogin.setText("");
+        checkBoxAdmin.setSelected(false);
+        checkBoxTreasurer.setSelected(false);
+        checkBoxUser.setSelected(false);
     }
     public void validateLogin(){
         String user = System.getenv("USER");
@@ -74,7 +95,6 @@ public class ControllerLoginWindowFactory {
         String databaseName = System.getenv("DATABASE_NAME");
         int portNumber = Integer.parseInt(System.getenv("PORT_NUMBER"));
         boolean encrypt = Boolean.parseBoolean(System.getenv("ENCRYPT"));
-
         Connection connection = ConnectionDatabase.getConnection(user, password, serverName, databaseName,
                 portNumber, encrypt);
         String veritylogin = "select * from dangnhap where passwordd='" + PasswordFieldPassword.getText() +
@@ -90,28 +110,26 @@ public class ControllerLoginWindowFactory {
 //                System.out.println(-1);
 //                System.out.println(queryResult.getString(2));
                 if(queryResult.getRow()==1){
-                    if(TextFieldUserName.getText().equals("admin")){
+                    if(TextFieldUserName.getText().equals("admin") && checkBoxAdmin.isSelected()==true && checkBoxUser.isSelected()==false && checkBoxTreasurer.isSelected()==false){
                         LableAlerLogin.setText("");
                         AdminWindowFactory adminWindowFactory = new AdminWindowFactory();
                         adminWindowFactory.openWindow();
-                    } else if (TextFieldUserName.getText().equals("user")) {
+                    } else if (TextFieldUserName.getText().equals("user")&&checkBoxAdmin.isSelected()==false && checkBoxUser.isSelected()==true && checkBoxTreasurer.isSelected()==false) {
                         LableAlerLogin.setText("");
                         UserWindowFactory userWindowFactory = new UserWindowFactory();
                         userWindowFactory.openWindow();
-                    }else {
+                    }else if(TextFieldUserName.getText().equals("treasurer") && checkBoxAdmin.isSelected()==false && checkBoxUser.isSelected()==false && checkBoxTreasurer.isSelected()==true){
                         LableAlerLogin.setText("");
                         TreasurerWindowFactory treasurerWindowFactory = new TreasurerWindowFactory();
                         treasurerWindowFactory.openWindow();
+                    }else {
+                        LableAlerLogin.setText("vui lòng chọn đúng chức danh");
                     }
-                    Stage loginStage = (Stage) buttonLogin.getScene().getWindow();
-                    loginStage.close();
                 }else{
                     LableAlerLogin.setText("Vui lòng nhập lại tên hoặc mật khẩu");
                 }
             }
-
         }catch (Exception e){
-
         }
     }
 }

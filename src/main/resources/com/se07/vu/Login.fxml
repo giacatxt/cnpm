@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -26,11 +27,11 @@
    <right>
       <AnchorPane prefHeight="400.0" prefWidth="289.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutY="53.0" prefHeight="21.0" prefWidth="320.0" text="ĐĂNG NHẬP QUẢN LÝ NHÂN KHẨU">
+            <Label alignment="CENTER" layoutY="49.0" prefHeight="21.0" prefWidth="320.0" text="ĐĂNG NHẬP QUẢN LÝ NHÂN KHẨU">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Label>
-            <Button fx:id="buttonCancelLogin" layoutX="29.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonCancelLogin" prefHeight="31.0" prefWidth="270.0" stylesheets="@login.css" text="Cancel" textFill="#eeecec">
+            <Button fx:id="buttonCancelLogin" layoutX="29.0" layoutY="309.0" mnemonicParsing="false" onAction="#onButtonCancelLogin" prefHeight="31.0" prefWidth="270.0" stylesheets="@login.css" text="Cancel" textFill="#eeecec">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -38,7 +39,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="buttonLogin" layoutX="29.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" stylesheets="@login.css" text="Login" textFill="#ebe1e1">
+            <Button fx:id="buttonLogin" layoutX="29.0" layoutY="257.0" mnemonicParsing="false" onAction="#onButtonLogin" prefHeight="31.0" prefWidth="270.0" stylesheets="@login.css" text="Login" textFill="#ebe1e1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -46,25 +47,28 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <TextField fx:id="TextFieldUserName" layoutX="73.0" layoutY="119.0" onKeyPressed="#keyPressedEnter" prefHeight="31.0" prefWidth="215.0" promptText="Username" style="-fx-background-radius: 15;">
+            <TextField fx:id="TextFieldUserName" layoutX="73.0" layoutY="91.0" onKeyPressed="#keyPressedEnter" prefHeight="31.0" prefWidth="215.0" promptText="Username" style="-fx-background-radius: 15;">
                <font>
                   <Font name="System Italic" size="15.0" />
                </font></TextField>
-            <Label fx:id="LableAlerLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="211.0" prefHeight="21.0" prefWidth="322.0" textFill="#dd1515" />
-            <PasswordField fx:id="PasswordFieldPassword" layoutX="73.0" layoutY="170.0" onKeyPressed="#keyPressedEnter" prefHeight="31.0" prefWidth="215.0" promptText="Password" style="-fx-background-radius: 15;">
+            <Label fx:id="LableAlerLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="218.0" prefHeight="21.0" prefWidth="322.0" textFill="#dd1515" />
+            <PasswordField fx:id="PasswordFieldPassword" layoutX="73.0" layoutY="142.0" onKeyPressed="#keyPressedEnter" prefHeight="31.0" prefWidth="215.0" promptText="Password" style="-fx-background-radius: 15;">
                <font>
                   <Font name="System Italic" size="15.0" />
                </font></PasswordField>
-            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="46.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="46.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@IconLoginUser.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="46.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="46.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@IconLoginPassword.png" />
                </image>
             </ImageView>
+            <CheckBox fx:id="checkBoxAdmin" layoutX="11.0" layoutY="185.0" mnemonicParsing="false" onKeyPressed="#keyPressedEnter" text="Tổ trưởng" />
+            <CheckBox fx:id="checkBoxUser" layoutX="115.0" layoutY="185.0" mnemonicParsing="false" onKeyPressed="#keyPressedEnter" text="Hộ gia đình" />
+            <CheckBox fx:id="checkBoxTreasurer" layoutX="228.0" layoutY="185.0" mnemonicParsing="false" onKeyPressed="#keyPressedEnter" text="Thủ quỹ" />
          </children>
       </AnchorPane>
    </right>

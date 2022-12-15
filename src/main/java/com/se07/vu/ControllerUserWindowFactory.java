@@ -1,6 +1,7 @@
 package com.se07.vu;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -8,9 +9,16 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class ControllerUserWindowFactory {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ControllerUserWindowFactory implements Initializable {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        paneNewPeopleUser.setVisible(false);
+    }
     @FXML
-    AnchorPane paneRightUser, anchorPaneUserMax;
+    AnchorPane paneRightUser, anchorPaneUserMax, paneNewPeopleUser, paneLeftUser;
     @FXML
     Button buttonLogoutUser;
     private Stage stage;
@@ -21,6 +29,19 @@ public class ControllerUserWindowFactory {
                 setButtonLogoutUser();
             }
         });
+    }
+    public void setMenuButtonAwardUser(){
+
+    }
+    public void setButtonNewPeopleUser(){
+        paneRightUser.setVisible(false);
+        paneLeftUser.setVisible(false);
+        paneNewPeopleUser.setVisible(true);
+    }
+    public void setButtonCancelTemporaryRegistrationPeopleUser(){
+        paneNewPeopleUser.setVisible(false);
+        paneLeftUser.setVisible(true);
+        paneRightUser.setVisible(true);
     }
     public void setButtonLogoutUser() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -36,4 +57,6 @@ public class ControllerUserWindowFactory {
         }
 
     }
+
+
 }

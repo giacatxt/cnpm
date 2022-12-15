@@ -20,4 +20,9 @@
 #paneRightTreasurer{
     -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 183, 215, 0.6) 97.53%);
 }
-
+#buttonAwardTreasurer{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonAwardTreasurer:hover{
+    -fx-background-color:rgba(4, 57, 244, 0.95);
+}

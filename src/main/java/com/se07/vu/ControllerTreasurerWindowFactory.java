@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -13,6 +14,8 @@ public class ControllerTreasurerWindowFactory {
     Button buttonLogoutTreasurer;
     @FXML
     AnchorPane anchorPaneTreasurerMax;
+    @FXML
+    Label lableShowAwardTreasurer;
     private Stage stage;
 
     public void keyPressedEscTreasurer(){
@@ -21,6 +24,9 @@ public class ControllerTreasurerWindowFactory {
                 setButtonLogoutTreasurer();
             }
         });
+    }
+    public void setButtonAwardTreasurer(){
+        lableShowAwardTreasurer.setText("Phần thưởng của bạn là c");
     }
     public void setButtonLogoutTreasurer(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);

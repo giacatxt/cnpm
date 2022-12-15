@@ -20,4 +20,24 @@
 #paneRightUser{
     -fx-background-color: linear-gradient(#1CCAF0 12.19%, rgba(82, 183, 215, 0.6) 97.53%);
 }
-
+#menuButtonAwardUser{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#menuButtonAwardUser:hover{
+    -fx-background-color: rgba(4, 57, 244, 0.95);
+}
+#paneNewPeopleUser{
+    -fx-background-color: white;
+}
+#buttonCancelTemporaryRegistrationPeopleUser{
+    -fx-background-color: rgba(0, 53, 240, 0.7);
+}
+#buttonCancelTemporaryRegistrationPeopleUser:hover{
+    -fx-background-color: rgba(0, 53, 240, 0.85);
+}
+#buttonNewPeopleUser{
+    -fx-background-color: black;
+}
+#buttonNewPeopleUser:hover{
+    -fx-background-color: #BF3FBF;
+}
