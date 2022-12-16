@@ -114,14 +114,20 @@ public class ControllerLoginWindowFactory {
                         LableAlerLogin.setText("");
                         AdminWindowFactory adminWindowFactory = new AdminWindowFactory();
                         adminWindowFactory.openWindow();
+                        stage = (Stage) borderPaneMainAdmin.getScene().getWindow();
+                        stage.close();
                     } else if (TextFieldUserName.getText().equals("user")&&checkBoxAdmin.isSelected()==false && checkBoxUser.isSelected()==true && checkBoxTreasurer.isSelected()==false) {
                         LableAlerLogin.setText("");
                         UserWindowFactory userWindowFactory = new UserWindowFactory();
                         userWindowFactory.openWindow();
+                        stage = (Stage) borderPaneMainAdmin.getScene().getWindow();
+                        stage.close();
                     }else if(TextFieldUserName.getText().equals("treasurer") && checkBoxAdmin.isSelected()==false && checkBoxUser.isSelected()==false && checkBoxTreasurer.isSelected()==true){
                         LableAlerLogin.setText("");
                         TreasurerWindowFactory treasurerWindowFactory = new TreasurerWindowFactory();
                         treasurerWindowFactory.openWindow();
+                        stage = (Stage) borderPaneMainAdmin.getScene().getWindow();
+                        stage.close();
                     }else {
                         LableAlerLogin.setText("vui lòng chọn đúng chức danh");
                     }
